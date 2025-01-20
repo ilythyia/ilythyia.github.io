@@ -1,0 +1,89 @@
+body{
+    font-family: Arial, sans-serif;
+    background-color: rgb(227, 250, 227);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.header {
+    margin-bottom: 20px;
+}
+
+.header .logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.header p {
+    color: rgb(30, 53, 30);
+}
+
+.login-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.login-container input{
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.login-container button{
+    width: 95%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #97b198;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.login-container button:hover{
+    background-color: #97b198;
+}
+
+.login-container a {
+    font-size: .8em;
+    color: #97b198;
+    text-decoration: none;
+}
+
+.login-container a:hover {
+    text-decoration: underline;
+}
+
+.create-account {
+    background-color: #97b198;
+    margin-top: 10px;
+}
+
+.footer {
+    margin-top: 20px;
+    font-size: 0.9em;
+}
+
+.footer a {
+    color: #97b198;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
