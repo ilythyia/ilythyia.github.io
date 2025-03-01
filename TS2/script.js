@@ -1,20 +1,19 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const buttons = document.querySelectorAll(".day-btn");
-    const container = document.getElementById("animation-container");
+let activeBox = null;
 
-    buttons.forEach(button => {
-        button.addEventListener("click", () => {
-            const box = document.createElement("div");
-            box.classList.add("animation-box");
+function animateBoxes(day) {
+    const newBox = document.querySelector(`.box${getDayNumber(day)}`);
 
-            // Assign random color based on button clicked
-            box.style.backgroundColor = getComputedStyle(button).backgroundColor;
+    if (activeBox === newBox) return; // Prevent re-triggering the same box
 
-            // Set a slight random offset for overlap effect
-            box.style.left = `${Math.random() * 50}px`;
-            box.style.top = `${Math.random() * 50}px`;
+    if (activeBox) {
+        activeBox.style.top = '-50%'; // Move current active box up and out
+    }
 
-            container.appendChild(box);
-        });
-    });
-});
+    newBox.style.top = '50%'; // Move new box down into view
+    activeBox = newBox; // Update active box
+}
+
+function getDayNumber(day) {
+    const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+    return days.indexOf(day) + 1;
+}

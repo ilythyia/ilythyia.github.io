@@ -1,25 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Day Buttons Animation</title>
-    <link rel="stylesheet" href="styles.css">
-
-</head>
-<body>
-    <div class="container">
-        <div class="buttons">
-            <button class="day-btn" data-day="Monday">Monday</button>
-            <button class="day-btn" data-day="Tuesday">Tuesday</button>
-            <button class="day-btn" data-day="Wednesday">Wednesday</button>
-            <button class="day-btn" data-day="Thursday">Thursday</button>
-            <button class="day-btn" data-day="Friday">Friday</button>
-            <button class="day-btn" data-day="Saturday">Saturday</button>
-            <button class="day-btn" data-day="Sunday">Sunday</button>
-        </div>
-        <div class="animation-container" id="animation-container"></div>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="buttons-container">
+      <button data-day="Monday" onclick="animateBoxes('Monday')">
+        Monday </button>
+      <button data-day="Tuesday" onclick="animateBoxes('Tuesday')">
+        Tuesday </button>
+      <button data-day="Wednesday" onclick="animateBoxes('Wednesday')">
+        Wednesday </button>
+      <button data-day="Thursday" onclick="animateBoxes('Thursday')">
+        Thursday </button>
+      <button data-day="Friday" onclick="animateBoxes('Friday')">
+        Friday </button>
+      <button data-day="Saturday" onclick="animateBoxes('Saturday')">
+        Saturday </button>
+      <button data-day="Sunday" onclick="animateBoxes('Sunday')">Sunday</button>
     </div>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+    <div class="box5"></div>
+    <div class="box6"></div>
+    <div class="box7"></div>
+
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
