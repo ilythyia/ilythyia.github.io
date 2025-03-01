@@ -18,8 +18,3 @@ function getDayNumber(day) {
     return days.indexOf(day) + 1;
 }
 
-window.addEventListener("resize", function () {
-    window.resizeTo(800, 600); // Forces window size back to 800x600
-});
-
-window.open("index.html", "_blank", "width=800,height=600,resizable=no");
