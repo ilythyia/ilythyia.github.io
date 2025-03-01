@@ -29,7 +29,13 @@ button {
     color: #fff;
     cursor: pointer;
     width: 100px;
+    transition: all 0.3s ease-in-out; /* Smooth transition */
 }
+
+button:hover {
+    transform: scale(1.1); /* Expands the button slightly */
+}
+
 
 .box1, .box2, .box3, .box4, .box5, .box6, .box7 {
     width: 400px;
