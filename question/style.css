@@ -1,0 +1,25 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #c9f1b9;
+}
+.question-box {
+    background: #fff;
+    padding: 32px 48px;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.2);
+    font-size: 1.5rem;
+    color: #006421;
+    text-align: center;
+    font-family: 'Quicksand', 'Pacifico', cursive, sans-serif;
+}
+.question-box button:hover {
+    box-shadow: 0 4px 16px rgba(0, 100, 33, 0.2), 0 2px 8px rgba(168, 0, 0, 0.15);
+    transition: box-shadow 0.2s;
+}
+.question-box button:active {
+    box-shadow: 0 2px 8px rgba(0, 100, 33, 0.2), 0 1px 4px rgba(168, 0, 0, 0.15);
+}

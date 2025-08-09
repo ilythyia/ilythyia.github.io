@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Yay! Valo Duo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../question/style.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #f7caca 0%, #c9f1b9 100%);
+        }
+        .yes-box {
+            background: #fff;
+            padding: 40px 56px;
+            border-radius: 24px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+            font-size: 2rem;
+            color: #ff69b4;
+            text-align: center;
+            font-family: 'Pacifico', 'Quicksand', cursive, sans-serif;
+            margin-top: 40px;
+            animation: pop 0.7s cubic-bezier(.68,-0.55,.27,1.55);
+        }
+        @keyframes pop {
+            0% { transform: scale(0.7); opacity: 0; }
+            80% { transform: scale(1.1); opacity: 1; }
+            100% { transform: scale(1); }
+        }
+        .yes-box img {
+            width: 180px;
+            margin-bottom: 18px;
+            border-radius: 16px;
+            box-shadow: 0 2px 12px rgba(255,105,180,0.15);
+        }
+        .cute-heart {
+            font-size: 2.5rem;
+            color: #ff69b4;
+            margin-bottom: 10px;
+            display: block;
+            animation: heartBeat 1.2s infinite;
+        }
+        @keyframes heartBeat {
+            0%, 100% { transform: scale(1); }
+            20% { transform: scale(1.2); }
+            40% { transform: scale(0.9); }
+            60% { transform: scale(1.1); }
+            80% { transform: scale(1); }
+        }
+        .yes-box button {
+            background: linear-gradient(90deg, #ffb6c1 0%, #c9f1b9 100%);
+            color: #fff;
+            font-family: 'Pacifico', cursive;
+            font-size: 1.3rem;
+            border: none;
+            border-radius: 12px;
+            padding: 10px 32px;
+            margin: 0 12px;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(255,105,180,0.12);
+            transition: box-shadow 0.2s, transform 0.2s;
+        }
+        .yes-box button:hover {
+            box-shadow: 0 6px 24px rgba(255,105,180,0.22);
+            transform: scale(1.08);
+        }
+    </style>
+</head>
+<body>
+    <div class="yes-box">
+        <span class="cute-heart">💖</span>
+        <img src="https://media3.giphy.com/media/3vdRneznCG9czQXkgq/200.webp" width:200px; margin-bottom:16px; display:block; margin-left:auto; margin-right:auto;>
+        <div>Yay! Thank you! 💖</div>
+        <button onclick="window.location.href='riotclient://launch';">Open Valo Now</button>
+    </div>
+</body>
+</html>
