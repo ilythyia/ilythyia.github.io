@@ -41,20 +41,20 @@ document.addEventListener("DOMContentLoaded", function() {
         }
         if (hoverCount === 10) {
             gifImg.src = gifUrls[1];
-            questionText.textContent = "Are you really sure?";
+            questionText.textContent = " Are you really sure?";
 
         }
         if (hoverCount === 15) {
             gifImg.src = gifUrls[2];
-            questionText.textContent = "Its really a no???";
+            questionText.textContent = " Its really a no???";
         }
         if (hoverCount === 20) {
             gifImg.src = gifUrls[3];
-            questionText.textContent = "REALLY???";
+            questionText.textContent = " REALLY???";
         }
         if (hoverCount === 25) {
             gifImg.src = gifUrls[4];
-            questionText.textContent = "You got no choice now!";
+            questionText.textContent = " You got no choice now!";
             noBtn.style.display = "none"; // Hide the No button
         }
     });
