@@ -10,7 +10,7 @@ const fortunes = [
     "Cannot predict now.",
     "Outlook good.",
     "Don't count on it."
-]; 
+];
 
 // Function to get a random fortune
 function getRandomFortune() {
@@ -185,30 +185,5 @@ if (select) {
         const val = e.target.value;
         applyTheme(val);
         localStorage.setItem('m8b-theme', val);
-    });
-}
-
-// --- Character counter for feedback ---
-const feedbackText = document.getElementById('feedback-text');
-const charCount = document.getElementById('char-count');
-
-if (feedbackText) {
-    feedbackText.addEventListener('input', (e) => {
-        charCount.textContent = `${e.target.value.length}/500`;
-    });
-}
-
-// --- Form submission message ---
-const feedbackForm = document.getElementById('feedback-form');
-if (feedbackForm) {
-    feedbackForm.addEventListener('submit', (e) => {
-        const btn = feedbackForm.querySelector('.submit-btn');
-        const originalText = btn.textContent;
-        btn.textContent = 'Sent! ✨';
-        btn.disabled = true;
-        setTimeout(() => {
-            btn.textContent = originalText;
-            btn.disabled = false;
-        }, 2000);
     });
 }
