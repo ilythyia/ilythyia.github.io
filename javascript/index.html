@@ -34,6 +34,34 @@
         <input type="text" id="question" placeholder="Enter your question here...">
         <p class="credit">Made by: Danyka Beatriz B. Narciso</p>
     </div>
+
+    <!-- Floating Chatbox -->
+    <div class="chatbox-container">
+        <button id="chatbox-toggle" class="chatbox-toggle" aria-label="Open chat">
+            <span class="chat-icon">💬</span>
+        </button>
+        <div id="chatbox" class="chatbox">
+            <div class="chatbox-header">
+                <h3>Feedback</h3>
+                <button class="chatbox-close" aria-label="Close chat">&times;</button>
+            </div>
+            <div id="chat-messages" class="chat-messages"></div>
+            <form id="feedback-form" class="chat-form">
+                <div class="form-group">
+                    <input type="text" id="name" placeholder="Your name..." required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" placeholder="Your email..." required>
+                </div>
+                <div class="form-group">
+                    <textarea id="feedback" placeholder="Tell us your feedback..." rows="3" required></textarea>
+                </div>
+                <button type="submit" class="send-btn">Send</button>
+            </form>
+            <div id="feedback-status" class="feedback-status"></div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>

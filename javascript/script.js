@@ -187,3 +187,105 @@ if (select) {
         localStorage.setItem('m8b-theme', val);
     });
 }
+
+// ===== FLOATING CHATBOX SETUP =====
+const chatboxToggle = document.getElementById('chatbox-toggle');
+const chatbox = document.getElementById('chatbox');
+const chatboxClose = document.querySelector('.chatbox-close');
+const feedbackForm = document.getElementById('feedback-form');
+const chatMessages = document.getElementById('chat-messages');
+const feedbackStatus = document.getElementById('feedback-status');
+
+// Add welcome message on page load
+function initializeChat() {
+    addBotMessage("Hi there! 👋 Have feedback or suggestions? We'd love to hear from you!");
+}
+
+// Toggle chatbox
+chatboxToggle.addEventListener('click', () => {
+    chatbox.classList.toggle('active');
+    if (chatbox.classList.contains('active') && chatMessages.children.length === 0) {
+        initializeChat();
+    }
+});
+
+// Close chatbox
+chatboxClose.addEventListener('click', () => {
+    chatbox.classList.remove('active');
+});
+
+// Close chatbox when clicking outside
+document.addEventListener('click', (e) => {
+    if (!e.target.closest('.chatbox-container')) {
+        chatbox.classList.remove('active');
+    }
+});
+
+// Add bot message to chat
+function addBotMessage(message) {
+    const messageDiv = document.createElement('div');
+    messageDiv.classList.add('chat-message', 'bot');
+    messageDiv.innerHTML = `<div class="chat-bubble">${message}</div>`;
+    chatMessages.appendChild(messageDiv);
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+}
+
+// Handle form submission
+feedbackForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const feedback = document.getElementById('feedback').value;
+    
+    // Show loading state
+    feedbackStatus.textContent = 'Sending...';
+    feedbackStatus.classList.remove('success', 'error');
+    feedbackStatus.classList.add('loading');
+    const submitBtn = feedbackForm.querySelector('.send-btn');
+    submitBtn.disabled = true;
+    
+    try {
+        // Send to Formspree
+        const response = await fetch('https://formspree.io/f/maqqwpee', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                name: name,
+                email: email,
+                message: feedback
+            })
+        });
+        
+        if (response.ok) {
+            feedbackStatus.textContent = '✓ Thank you! Your feedback has been sent.';
+            feedbackStatus.classList.remove('loading');
+            feedbackStatus.classList.add('success');
+            
+            addBotMessage("Thanks for your feedback! We appreciate it. 🙏");
+            
+            feedbackForm.reset();
+            
+            // Close after 3 seconds
+            setTimeout(() => {
+                chatbox.classList.remove('active');
+                feedbackStatus.textContent = '';
+                feedbackStatus.classList.remove('success');
+                chatMessages.innerHTML = '';
+            }, 3000);
+        } else {
+            throw new Error('Failed to send feedback');
+        }
+    } catch (error) {
+        console.error('Error:', error);
+        feedbackStatus.textContent = '✗ Error sending feedback.';
+        feedbackStatus.classList.remove('loading');
+        feedbackStatus.classList.add('error');
+        addBotMessage('Oops! Something went wrong. Please try again.');
+    }
+    
+    submitBtn.disabled = false;
+}
+)
