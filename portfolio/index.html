@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 
+        DANYKA NARCISO - PIXEL PASTEL PORTFOLIO
+        Theme: Retro pixel art with soft pastel colors
+        Last Updated: 2026-03-23
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danyka Narciso | Pixel Pastel Portfolio</title>
+    
+    <!-- Google Fonts: Press Start 2P (pixel font), VT323 (terminal font), Quicksand (body text) -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- External Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- ============================================
+         LOADING SCREEN - Shows while page loads
+         ============================================ -->
+    <div class="loader" id="loader">
+        <div class="pixel-loader"></div>
+        <div class="loader-text">LOADING...</div>
+    </div>
+
+    <!-- ============================================
+         BACKGROUND ELEMENTS - Visual effects layer
+         ============================================ -->
+    <!-- Static pixel grid overlay -->
+    <div class="pixel-bg"></div>
+    <!-- Container for animated floating pixels (populated by JS) -->
+    <div class="floating-pixels" id="floatingPixels"></div>
+
+    <!-- ============================================
+         NAVIGATION - Fixed top menu
+         ============================================ -->
+    <nav>
+        <ul class="nav-links">
+            <li><a href="#home">HOME</a></li>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#skills">SKILLS</a></li>
+            <li><a href="#projects">WORK</a></li>
+            <li><a href="#experience">EXP</a></li>
+            <li><a href="#background">EDU</a></li>
+            <li><a href="#certs">CERTS</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+        </ul>
+    </nav>
+
+    <!-- ============================================
+         HERO SECTION - Main landing area
+         Contains: Name, title animation, CTA buttons, pixel avatar
+         ============================================ -->
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <!-- Left side: Text content -->
+            <div class="hero-text">
+                <!-- Badge showing current status -->
+                <div class="pixel-badge">IT STUDENT</div>
+                
+                <!-- Main name heading -->
+                <h1>DANYKA<br>NARCISO</h1>
+                
+                <!-- Typewriter effect container -->
+                <div class="typing-text">
+                    <span id="typewriter"></span><span class="cursor"></span>
+                </div>
+                
+                <!-- Call-to-action buttons -->
+                <div class="hero-buttons">
+                    <a href="#contact" class="pixel-btn primary">HIRE ME</a>
+                    <a href="#projects" class="pixel-btn">VIEW WORK</a>
+                </div>
+            </div>
+            
+            <!-- Right side: Pixel art avatar -->
+            <div class="hero-avatar">
+                <div class="avatar-container">
+                    <div class="pixel-character">
+                        <!-- CSS-only pixel face construction -->
+                        <div class="pixel-face">
+                            <div class="pixel-eyes">
+                                <div class="eye"></div>
+                                <div class="eye"></div>
+                            </div>
+                            <div class="pixel-blush">
+                                <div class="blush"></div>
+                                <div class="blush"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Floating code symbols around avatar -->
+                    <div class="floating-icons">
+                        <div class="float-icon" style="top: 20%; left: 10%; animation-delay: 0s;">&lt;/&gt;</div>
+                        <div class="float-icon" style="top: 60%; right: 10%; animation-delay: 1s;">{ }</div>
+                        <div class="float-icon" style="bottom: 20%; left: 20%; animation-delay: 2s;">#</div>
+                        <div class="float-icon" style="top: 40%; right: 15%; animation-delay: 3s;">01</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         ABOUT SECTION - Personal introduction
+         ============================================ -->
+    <section id="about">
+        <h2 class="section-title reveal">ABOUT ME</h2>
+        <div class="about-grid">
+            <!-- Left column: Stats card -->
+            <div class="about-card reveal">
+                <h3 style="font-family: 'Press Start 2P'; font-size: 12px; margin-bottom: 20px; color: #ff6b9d;">QUICK STATS</h3>
+                <div class="stat-box">
+                    <div class="stat-item">
+                        <span class="stat-number">1st</span>
+                        <span class="stat-label">Year<br>Student</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">6+</span>
+                        <span class="stat-label">Programming<br>Languages</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">4+</span>
+                        <span class="stat-label">Projects<br>Built</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">2029</span>
+                        <span class="stat-label">Expected<br>Grad</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Right column: Bio text -->
+            <div class="about-content reveal">
+                <h3>HELLO WORLD!</h3>
+                <p>I'm Danyka Beatriz B. Narciso, a passionate BS Information Technology student at the Technological Institute of the Philippines. Currently in my first year (transferred 2025), I'm actively seeking opportunities to gain professional experience in the IT industry.</p>
+                <p>My journey in tech started with a fascination for how things work behind the screen. Today, I'm building interactive web projects, proficient in multiple programming languages, and holding a Cisco CCST Networking certification.</p>
+                <p>When I'm not coding, you'll find me drawing, organizing events, or exploring new creative tools. Check out my pixel-perfect projects below!</p>
+                
+                <!-- Quick info grid -->
+                <div class="info-grid">
+                    <div class="info-item">
+                        <span class="info-icon">📍</span>
+                        <div>
+                            <strong>Location</strong><br>
+                            Sampaloc, Manila
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-icon">🎓</span>
+                        <div>
+                            <strong>Education</strong><br>
+                            TIP Manila
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-icon">💼</span>
+                        <div>
+                            <strong>Status</strong><br>
+                            Open to Work
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-icon">🌐</span>
+                        <div>
+                            <strong>Languages</strong><br>
+                            English, Tagalog
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         SKILLS SECTION - Technical abilities
+         4 Categories: Programming, Web Dev, Creative, Networking
+         ============================================ -->
+    <section id="skills">
+        <h2 class="section-title reveal">TECHNICAL SKILLS</h2>
+        <div class="skills-container">
+            <!-- Programming Category -->
+            <div class="skill-category reveal">
+                <div class="skill-header">
+                    <div class="skill-icon">💻</div>
+                    <h3 class="skill-title">PROGRAMMING</h3>
+                </div>
+                <ul class="skill-list">
+                    <li class="skill-item">
+                        <div class="skill-name">
+                            <span>Python</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="85"></div>
+                        </div>
+                    </li>
+                    <li class="skill-item">
+                        <div class="skill-name">
+                            <span>Java</span>
+                            <span>75%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="75"></div>
+                        </div>
+                    </li>
+                    <li class="skill-item">
+                        <div class="skill-name">
+                            <span>C++</span>
+                            <span>70%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="70"></div>
+                        </div>
+                    </li>
+                    <li class="skill-item">
+                        <div class="skill-name">
+                            <span>JavaScript</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="80"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Web Development Category -->
+            <div class="skill-category reveal">
+                <div class="skill-header">
+                    <div class="skill-icon">🌐</div>
+                    <h3 class="skill-title">WEB DEV</h3>
+                </div>
+                <ul class="skill-list">
+                    <li class="skill-item">
+                        <div class="skill-name">
+                            <span>HTML/CSS</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="90"></div>
+                        </div>
+                    </li>
+                    <li class="skill-item">
+                        <div class="skill-name">
+                            <span>Responsive Design</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="85"></div>
+                        </div>
+                    </li>
+                    <li class="skill-item">
+                        <div class="skill-name">
+                            <span>UI/UX Basics</span>
+                            <span>75%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="75"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Creative Tools Category -->
+            <div class="skill-category reveal">
+                <div class="skill-header">
+                    <div class="skill-icon">🎨</div>
+                    <h3 class="skill-title">CREATIVE</h3>
+                </div>
+                <ul class="skill-list">
+                    <li class="skill-item">
+                        <div class="skill-name">
+                            <span>Adobe Photoshop</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="80"></div>
+                        </div>
+                    </li>
+                    <li class="skill-item">
+                        <div class="skill-name">
+                            <span>Canva</span>
+                            <span>95%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="95"></div>
+                        </div>
+                    </li>
+                    <li class="skill-item">
+                        <div class="skill-name">
+                            <span>Graphic Design</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="85"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Networking Category -->
+            <div class="skill-category reveal">
+                <div class="skill-header">
+                    <div class="skill-icon">📡</div>
+                    <h3 class="skill-title">NETWORKING</h3>
+                </div>
+                <ul class="skill-list">
+                    <li class="skill-item">
+                        <div class="skill-name">
+                            <span>Cisco Networking</span>
+                            <span>75%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="75"></div>
+                        </div>
+                    </li>
+                    <li class="skill-item">
+                        <div class="skill-name">
+                            <span>Network Support</span>
+                            <span>70%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="70"></div>
+                        </div>
+                    </li>
+                    <li class="skill-item">
+                        <div class="skill-name">
+                            <span>Troubleshooting</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="80"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         PROJECTS SECTION - Interactive Portfolio Projects
+         4 Projects: Calculator, To-Do List, Pixel Paint, Weather Widget
+         All themed with pixel-pastel aesthetic
+         ============================================ -->
+    <section id="projects">
+        <h2 class="section-title reveal">PROJECTS</h2>
+        
+        <!-- Project 1: Pixel Calculator -->
+        <div class="project-showcase reveal">
+            <div class="project-header">
+                <div class="project-icon">🧮</div>
+                <div>
+                    <h3 class="project-title">PIXEL CALCULATOR</h3>
+                    <p class="project-subtitle">JavaScript • CSS Grid • Event Handling</p>
+                </div>
+            </div>
+            
+            <!-- Calculator App Container -->
+            <div class="calculator-app">
+                <div class="calc-display" id="calcDisplay">0</div>
+                <div class="calc-buttons">
+                    <button class="calc-btn clear" onclick="clearCalc()">C</button>
+                    <button class="calc-btn operator" onclick="appendOperator('/')">÷</button>
+                    <button class="calc-btn operator" onclick="appendOperator('*')">×</button>
+                    <button class="calc-btn operator" onclick="deleteLast()">⌫</button>
+                    
+                    <button class="calc-btn" onclick="appendNumber('7')">7</button>
+                    <button class="calc-btn" onclick="appendNumber('8')">8</button>
+                    <button class="calc-btn" onclick="appendNumber('9')">9</button>
+                    <button class="calc-btn operator" onclick="appendOperator('-')">-</button>
+                    
+                    <button class="calc-btn" onclick="appendNumber('4')">4</button>
+                    <button class="calc-btn" onclick="appendNumber('5')">5</button>
+                    <button class="calc-btn" onclick="appendNumber('6')">6</button>
+                    <button class="calc-btn operator" onclick="appendOperator('+')">+</button>
+                    
+                    <button class="calc-btn" onclick="appendNumber('1')">1</button>
+                    <button class="calc-btn" onclick="appendNumber('2')">2</button>
+                    <button class="calc-btn" onclick="appendNumber('3')">3</button>
+                    <button class="calc-btn equals" onclick="calculate()">=</button>
+                    
+                    <button class="calc-btn zero" onclick="appendNumber('0')">0</button>
+                    <button class="calc-btn" onclick="appendNumber('.')">.</button>
+                </div>
+            </div>
+            
+            <p class="project-desc">A fully functional calculator with pixel-perfect styling. Features basic arithmetic operations, clear/delete functions, and keyboard support. Built to demonstrate DOM manipulation and CSS Grid layout skills.</p>
+        </div>
+
+        <!-- Project 2: Pixel To-Do List -->
+        <div class="project-showcase reveal">
+            <div class="project-header">
+                <div class="project-icon">✅</div>
+                <div>
+                    <h3 class="project-title">PIXEL TASK MASTER</h3>
+                    <p class="project-subtitle">Local Storage • DOM Manipulation • Array Methods</p>
+                </div>
+            </div>
+            
+            <!-- To-Do App Container -->
+            <div class="todo-app">
+                <div class="todo-input-container">
+                    <input type="text" class="todo-input" id="todoInput" placeholder="Add a new task..." maxlength="30">
+                    <button class="todo-add-btn" onclick="addTodo()">+</button>
+                </div>
+                <ul class="todo-list" id="todoList">
+                    <!-- Sample tasks populated by JS -->
+                </ul>
+                <div class="todo-stats">
+                    <span id="todoCount">0 tasks pending</span>
+                    <button class="todo-clear" onclick="clearCompleted()">Clear Done</button>
+                </div>
+            </div>
+            
+            <p class="project-desc">Interactive task manager with local storage persistence. Features add/delete/complete functionality, task counters, and a clean pixel interface. Demonstrates CRUD operations and data persistence.</p>
+        </div>
+
+        <!-- Project 3: Pixel Paint -->
+        <div class="project-showcase reveal">
+            <div class="project-header">
+                <div class="project-icon">🎨</div>
+                <div>
+                    <h3 class="project-title">PIXEL PAINT STUDIO</h3>
+                    <p class="project-subtitle">Canvas API • Event Listeners • Dynamic Grid</p>
+                </div>
+            </div>
+            
+            <!-- Pixel Paint App -->
+            <div class="paint-app">
+                <div class="paint-toolbar">
+                    <div class="color-palette">
+                        <button class="color-btn active" style="background: #2d3436" onclick="setPaintColor('#2d3436')"></button>
+                        <button class="color-btn" style="background: #ff6b9d" onclick="setPaintColor('#ff6b9d')"></button>
+                        <button class="color-btn" style="background: #ffd1dc" onclick="setPaintColor('#ffd1dc')"></button>
+                        <button class="color-btn" style="background: #c8f4e8" onclick="setPaintColor('#c8f4e8')"></button>
+                        <button class="color-btn" style="background: #b5e4ff" onclick="setPaintColor('#b5e4ff')"></button>
+                        <button class="color-btn" style="background: #ffeaa7" onclick="setPaintColor('#ffeaa7')"></button>
+                        <button class="color-btn" style="background: #ffffff" onclick="setPaintColor('#ffffff')"></button>
+                    </div>
+                    <button class="paint-clear" onclick="clearCanvas()">CLEAR</button>
+                </div>
+                <div class="paint-canvas" id="paintCanvas">
+                    <!-- 16x16 Grid generated by JS -->
+                </div>
+                <p style="font-size: 12px; text-align: center; margin-top: 10px; color: #666; font-family: 'Press Start 2P';">Click pixels to paint!</p>
+            </div>
+            
+            <p class="project-desc">Browser-based pixel art creator with customizable color palette. Features a 16x16 drawing grid, color selection, and one-click clear. Built to explore CSS Grid and mouse event handling.</p>
+        </div>
+
+        <!-- Project 4: Weather Widget -->
+        <div class="project-showcase reveal">
+            <div class="project-header">
+                <div class="project-icon">🌤️</div>
+                <div>
+                    <h3 class="project-title">PIXEL WEATHER</h3>
+                    <p class="project-subtitle">API Integration • Async/Await • JSON Parsing</p>
+                </div>
+            </div>
+            
+            <!-- Weather App -->
+            <div class="weather-app">
+                <div class="weather-search">
+                    <input type="text" class="weather-input" id="weatherInput" placeholder="Enter city..." value="Manila">
+                    <button class="weather-btn" onclick="getWeather()">🔍</button>
+                </div>
+                <div class="weather-display" id="weatherDisplay">
+                    <div class="weather-main">
+                        <div class="weather-icon" id="weatherIcon">☀️</div>
+                        <div class="weather-temp" id="weatherTemp">32°C</div>
+                    </div>
+                    <div class="weather-info">
+                        <div class="weather-city" id="weatherCity">Manila, PH</div>
+                        <div class="weather-desc" id="weatherDesc">Sunny</div>
+                        <div class="weather-details">
+                            <span>💧 <span id="humidity">65%</span></span>
+                            <span>💨 <span id="wind">12 km/h</span></span>
+                        </div>
+                    </div>
+                </div>
+                <p style="font-size: 10px; text-align: center; color: #999; margin-top: 10px; font-family: 'VT323';">*Simulated data for demo purposes</p>
+            </div>
+            
+            <p class="project-desc">Weather widget with simulated API integration. Displays temperature, conditions, humidity, and wind speed. Designed to demonstrate async JavaScript concepts and dynamic UI updates.</p>
+        </div>
+    </section>
+
+    <!-- ============================================
+         EXPERIENCE SECTION - Work/Leadership History
+         NOTE: Separated from Education/Background
+         Current: Manila Junior Creatives role
+         ============================================ -->
+    <section id="experience">
+        <h2 class="section-title reveal">EXPERIENCE</h2>
+        <div class="timeline">
+            <!-- Experience Item 1: Student Organization -->
+            <div class="timeline-item reveal">
+                <div class="timeline-date">SEPT 2023 - SEPT 2024</div>
+                <h3 class="timeline-title">MANILA JUNIOR CREATIVES</h3>
+                <div class="timeline-subtitle">Alliance of Information Technology Students</div>
+                <p class="timeline-desc">Designed and created publicity materials for student organization events and initiatives. Collaborated with team members to develop creative visual content that effectively communicated event themes and boosted student engagement.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         EDUCATION BACKGROUND SECTION - School History
+         NOTE: Separated from Experience section
+         Updated: Now at TIP from 2025-Present
+         ============================================ -->
+    <section id="background">
+        <h2 class="section-title reveal">EDUCATION</h2>
+        <div class="timeline">
+            <!-- Current Education: TIP (Updated 2026-03-23) -->
+            <div class="timeline-item reveal">
+                <div class="timeline-date">2025 - PRESENT</div>
+                <h3 class="timeline-title">BS INFORMATION TECHNOLOGY</h3>
+                <div class="timeline-subtitle">Technological Institute of the Philippines (TIP)</div>
+                <p class="timeline-desc">Currently pursuing comprehensive IT education with focus on software development, networking, and system administration. Transferred in 2025 to continue academic journey. Maintaining active involvement in student organizations and continuous skill development through certifications.</p>
+            </div>
+
+            <!-- Previous Education: SHS -->
+            <div class="timeline-item reveal">
+                <div class="timeline-date">2023</div>
+                <h3 class="timeline-title">SENIOR HIGH SCHOOL</h3>
+                <div class="timeline-subtitle">Far Eastern University - Roosevelt (With Honors)</div>
+                <p class="timeline-desc">Graduated with honors, demonstrating strong academic foundation and discipline. Developed early interest in technology and creative problem-solving during formative years.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         CERTIFICATIONS SECTION - Professional Certs
+         ============================================ -->
+    <section id="certs">
+        <h2 class="section-title reveal">CERTIFICATIONS</h2>
+        <div class="cert-grid">
+            <!-- Cisco Certification Card -->
+            <div class="cert-card reveal">
+                <div class="cert-badge">🏆</div>
+                <h3 class="cert-title">CISCO CERTIFIED SUPPORT TECHNICIAN</h3>
+                <div class="cert-date">February 10, 2025</div>
+                <p style="font-size: 14px; margin-bottom: 15px; color: #666;">Networking - Lifetime Certification</p>
+                <div class="cert-id">ID: CSCO14854031</div>
+                <div style="margin-top: 20px; font-size: 12px; color: #ff6b9d; font-weight: 600;">✓ VERIFIED</div>
+            </div>
+
+            <!-- Future Certifications Placeholder -->
+            <div class="cert-card reveal" style="opacity: 0.7;">
+                <div class="cert-badge" style="background: linear-gradient(135deg, #e6e6fa, #d3d3d3);">🎯</div>
+                <h3 class="cert-title">MORE CERTIFICATIONS</h3>
+                <div class="cert-date">IN PROGRESS</div>
+                <p style="font-size: 14px; margin-bottom: 15px; color: #666;">Actively pursuing professional development opportunities in cloud computing, cybersecurity, and advanced networking.</p>
+                <div style="margin-top: 20px; font-size: 12px; color: #666; font-weight: 600;">⏳ LOADING...</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         CONTACT SECTION - Get in touch
+         ============================================ -->
+    <section id="contact">
+        <h2 class="section-title reveal">GET IN TOUCH</h2>
+        <div class="contact-container">
+            <!-- Left: Contact Information -->
+            <div class="contact-info reveal">
+                <div class="contact-item">
+                    <div class="contact-icon">📧</div>
+                    <div class="contact-text">
+                        <h4>EMAIL</h4>
+                        <p>ayka.bea16@gmail.com</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">📱</div>
+                    <div class="contact-text">
+                        <h4>PHONE</h4>
+                        <p>0956 450 7547</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">📍</div>
+                    <div class="contact-text">
+                        <h4>LOCATION</h4>
+                        <p>1216 Musa Street, Sampaloc<br>Manila, 1008</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">💼</div>
+                    <div class="contact-text">
+                        <h4>STATUS</h4>
+                        <p>Open for Internships &<br>Entry-level Opportunities</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Contact Form -->
+            <div class="contact-form reveal">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label>YOUR NAME</label>
+                        <input type="text" class="pixel-input" placeholder="Enter your name..." required>
+                    </div>
+                    <div class="form-group">
+                        <label>YOUR EMAIL</label>
+                        <input type="email" class="pixel-input" placeholder="Enter your email..." required>
+                    </div>
+                    <div class="form-group">
+                        <label>MESSAGE</label>
+                        <textarea class="pixel-input" placeholder="Type your message here..." required></textarea>
+                    </div>
+                    <button type="submit" class="pixel-btn primary" style="width: 100%;">SEND MESSAGE 📤</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         FOOTER - Site footer
+         ============================================ -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-avatar"></div>
+            <p class="footer-text">THANKS FOR VISITING!<br>LET'S BUILD SOMETHING AMAZING TOGETHER</p>
+            <div class="social-links">
+                <a href="#" class="social-btn" title="LinkedIn">💼</a>
+                <a href="#" class="social-btn" title="GitHub">💻</a>
+                <a href="#" class="social-btn" title="Email">✉️</a>
+                <a href="#" class="social-btn" title="Resume">📄</a>
+            </div>
+            <p class="copyright">© 2026 DANYKA NARCISO | CRAFTED WITH 💖 & PIXELS</p>
+        </div>
+    </footer>
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
