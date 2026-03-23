@@ -1,6 +1,5 @@
 /**
- * DANYKA NARCISO - PIXEL PASTEL PORTFOLIO SCRIPTS
- * Theme: Retro pixel art with soft pastel colors
+ * DANYKA NARCISO - PORTFOLIO SCRIPTS
  * Last Updated: 2026-03-23
  * 
  * Features:
@@ -12,7 +11,7 @@
  * - Smooth scrolling navigation
  * - Form handling
  * 
- * NEW: Interactive Projects
+ * Interactive Projects
  * - Pixel Calculator (basic arithmetic, keyboard support)
  * - Pixel Task Master (CRUD operations, localStorage)
  * - Pixel Paint Studio (16x16 grid, color picker)
