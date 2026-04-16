@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday! 🎂</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <canvas id="confetti"></canvas>
+    
+    <div class="container">
+        <div class="loot-tick">
+            <div class="tick-body">
+                <div class="tick-eye left"></div>
+                <div class="tick-eye right"></div>
+                <div class="tick-smile"></div>
+            </div>
+            <div class="tick-legs">
+                <div class="leg"></div>
+                <div class="leg"></div>
+                <div class="leg"></div>
+            </div>
+        </div>
+
+        <div class="birthday-card">
+            <div class="card-header">
+                <div class="apex-logo">
+                    <span class="logo-text">APEX</span>
+                    <span class="logo-sub">LEGENDS</span>
+                </div>
+                <div class="birthday-badge">🎂 BIRTHDAY EDITION 🎂</div>
+            </div>
+            
+            <h1 class="main-title">HAPPY BIRTHDAY!</h1>
+            <h2 class="subtitle">Legendary Birthday Wishes!</h2>
+            
+            <div class="message-box">
+                <p class="birthday-message">
+                    Wishing you a <span class="highlight">CHAMPION</span> level birthday!
+                </p>
+                <p class="birthday-message">
+                    May your day be filled with <span class="highlight-legendary">LEGENDARY</span> moments,
+                </p>
+                <p class="birthday-message">
+                    <span class="highlight-epic">EPIC</span> surprises, and infinite joy!
+                </p>
+            </div>
+
+            <div class="stats-container">
+                <div class="stat-box">
+                    <div class="stat-icon">🎁</div>
+                    <div class="stat-label">Presents</div>
+                    <div class="stat-value" id="presents">0</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-icon">🎈</div>
+                    <div class="stat-label">Balloons</div>
+                    <div class="stat-value" id="balloons">0</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-icon">🎉</div>
+                    <div class="stat-label">Fun Level</div>
+                    <div class="stat-value" id="fun">MAX</div>
+                </div>
+            </div>
+
+            <div class="interactive-section">
+                <button class="apex-btn" id="celebrateBtn">
+                    <span class="btn-icon">🎊</span>
+                    <span class="btn-text">CLICK TO CELEBRATE!</span>
+                </button>
+                
+                <div class="gift-section">
+                    <p class="gift-hint">Click the loot box to open your gift! 🎁</p>
+                    <div class="loot-box" id="lootBox">
+                        <div class="box-lid">
+                            <div class="lid-detail"></div>
+                        </div>
+                        <div class="box-body">
+                            <div class="apex-symbol">A</div>
+                        </div>
+                        <div class="glow"></div>
+                    </div>
+                    <div class="gift-reveal" id="giftReveal">
+                        <div class="gift-content">
+                            <span class="gift-emoji">🔥</span>
+                            <p class="gift-text">LEGENDARY BIRTHDAY SEX</p>
+                            <p class="gift-sub">Redeemable ANY day, ANY time! 😏🔥</p>
+                            <p class="gift-code">Coupon Code: MABY-BDAY-SEX</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Letter Section -->
+            <div class="letter-section">
+                <div class="letter-envelope">
+                    <div class="envelope-flap"></div>
+                    <div class="letter-content">
+                        <div class="letter-paper">
+                            <p class="letter-salutation">Dear Maby,</p>
+                            <p class="letter-body">
+                                Happy Birthday!! I hope you enjoyed your birthday, and I am sorry that my birthday gift is late! I hope that you would continue to be healthy and always remember that I love you so so so much!
+                            </p>
+                            <p class="letter-closing">
+                                From yours truly,<br>
+                                <span class="signature">Maby &lt;3</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Apex Legends PC Button -->
+            <div class="apex-pc-section">
+                <a href="https://www.ea.com/games/apex-legends" target="_blank" class="apex-pc-btn">
+                    <span class="btn-icon">🎮</span>
+                    <span class="btn-text">PLAY APEX LEGENDS PC</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="floating-elements">
+            <div class="floater" style="--delay: 0s;">🎈</div>
+            <div class="floater" style="--delay: 0.5s;">🎂</div>
+            <div class="floater" style="--delay: 1s;">🎁</div>
+            <div class="floater" style="--delay: 1.5s;">✨</div>
+            <div class="floater" style="--delay: 2s;">🎊</div>
+            <div class="floater" style="--delay: 2.5s;">🎉</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
