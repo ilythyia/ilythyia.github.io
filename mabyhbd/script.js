@@ -30,14 +30,41 @@ function initConfetti() {
     
     class Particle {
         constructor(x, y, type = 'normal') {
-            this.x = x || Math.random() * canvas.width;
-            this.y = y || -20;
-            this.size = Math.random() * 10 + 5;
+            // Spawn from multiple edges for more spread
+            const spawnEdge = Math.random();
+            if (x === undefined) {
+                if (spawnEdge < 0.5) {
+                    // From top
+                    this.x = Math.random() * canvas.width;
+                    this.y = -30;
+                } else if (spawnEdge < 0.75) {
+                    // From left
+                    this.x = -30;
+                    this.y = Math.random() * canvas.height * 0.5;
+                } else {
+                    // From right
+                    this.x = canvas.width + 30;
+                    this.y = Math.random() * canvas.height * 0.5;
+                }
+            } else {
+                this.x = x;
+                this.y = y || -20;
+            }
+            
+            this.size = Math.random() * 12 + 6;
             this.color = colors[Math.floor(Math.random() * colors.length)];
-            this.speedX = Math.random() * 6 - 3;
-            this.speedY = Math.random() * 3 + 2;
+            
+            // Wider spread for speedX
+            if (type === 'burst') {
+                this.speedX = (Math.random() - 0.5) * 25; // Very wide spread for bursts
+                this.speedY = (Math.random() - 0.5) * 25;
+            } else {
+                this.speedX = (Math.random() - 0.5) * 12; // Wider normal spread
+                this.speedY = Math.random() * 4 + 1;
+            }
+            
             this.rotation = Math.random() * 360;
-            this.rotationSpeed = Math.random() * 10 - 5;
+            this.rotationSpeed = (Math.random() - 0.5) * 15;
             this.type = type;
             
             // Special shapes for birthday
@@ -104,8 +131,8 @@ function initConfetti() {
         ctx.fill();
     }
     
-    // Create initial confetti
-    for (let i = 0; i < 50; i++) {
+    // Create initial confetti - more particles for better spread
+    for (let i = 0; i < 80; i++) {
         particles.push(new Particle());
     }
     
@@ -119,14 +146,16 @@ function initConfetti() {
             particles[i].update();
             particles[i].draw();
             
-            // Remove particles that fall off screen
-            if (particles[i].y > canvas.height + 50) {
+            // Remove particles that fall off screen (all edges)
+            if (particles[i].y > canvas.height + 100 || 
+                particles[i].x < -100 || 
+                particles[i].x > canvas.width + 100) {
                 particles.splice(i, 1);
             }
         }
         
-        // Add new particles occasionally
-        if (particles.length < 100 && Math.random() < 0.1) {
+        // Add new particles more frequently for continuous spread
+        if (particles.length < 150 && Math.random() < 0.15) {
             particles.push(new Particle());
         }
         
@@ -136,7 +165,7 @@ function initConfetti() {
     animate();
     
     // Expose function to add burst of confetti
-    window.confettiBurst = function(x, y, count = 30) {
+    window.confettiBurst = function(x, y, count = 50) {
         for (let i = 0; i < count; i++) {
             particles.push(new Particle(x, y, 'burst'));
         }
