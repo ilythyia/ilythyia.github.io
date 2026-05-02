@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boss Kups Garage — Eat • Drink • Relax</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <img src="images/logo.jpg" alt="Boss Kups Garage" class="logo-img">
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#menu" class="nav-link">Menu</a></li>
+                <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg">
+            <img src="images/banner.png" alt="Boss Kups Garage Banner" class="hero-img">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">BOSS KUPS</h1>
+            <p class="hero-subtitle">GARAGE</p>
+            <p class="hero-tagline">Eat • Drink • Relax</p>
+            <div class="hero-buttons">
+                <a href="#menu" class="btn btn-primary">View Menu</a>
+                <a href="#contact" class="btn btn-secondary">Find Us</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span class="scroll-mouse">
+                <span class="scroll-wheel"></span>
+            </span>
+            <p>Scroll to explore</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Our Story</span>
+                <h2 class="section-title">Welcome to Boss Kups</h2>
+                <p class="section-desc">Where great food meets great vibes</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="about-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                    </div>
+                    <h3>Good Food</h3>
+                    <p>From hearty comfort meals to sizzling specialties, our kitchen serves up flavors that hit the spot every time.</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>
+                    </div>
+                    <h3>Cold Drinks</h3>
+                    <p>Ice-cold beers, signature cocktails, and refreshing beverages to keep the good times flowing all night long.</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                    </div>
+                    <h3>Chill Vibes</h3>
+                    <p>Live music, friendly faces, and an atmosphere that feels like home. Come unwind with us at Boss Kups Garage.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section class="menu" id="menu">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">What We Serve</span>
+                <h2 class="section-title">Our Menu</h2>
+                <p class="section-desc">Fresh, flavorful, and made with passion</p>
+            </div>
+            <div class="menu-tabs">
+                <button class="tab-btn active" data-tab="food">Food</button>
+                <button class="tab-btn" data-tab="drinks">Drinks</button>
+                <button class="tab-btn" data-tab="specials">Specials</button>
+            </div>
+            <div class="menu-content">
+                <div class="tab-panel active" id="food">
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                            <div class="menu-item-info">
+                                <h4>Sisig Platter</h4>
+                                <p>Crispy pork sisig served on a sizzling plate with egg and calamansi</p>
+                            </div>
+                            <span class="menu-price">₱249</span>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-info">
+                                <h4>Crispy Pata</h4>
+                                <p>Deep-fried pork knuckle with special soy-vinegar dipping sauce</p>
+                            </div>
+                            <span class="menu-price">₱499</span>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-info">
+                                <h4>Garlic Butter Chicken</h4>
+                                <p>Juicy fried chicken tossed in rich garlic butter sauce</p>
+                            </div>
+                            <span class="menu-price">₱299</span>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-info">
+                                <h4>Pork BBQ Skewers</h4>
+                                <p>Grilled marinated pork served with java rice and atchara</p>
+                            </div>
+                            <span class="menu-price">₱199</span>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-info">
+                                <h4>Beef Tapa</h4>
+                                <p>Cured beef slices with garlic fried rice and sunny-side up egg</p>
+                            </div>
+                            <span class="menu-price">₱229</span>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-info">
+                                <h4>Seafood Paella</h4>
+                                <p>Spanish-style rice with shrimp, mussels, squid, and fish</p>
+                            </div>
+                            <span class="menu-price">₱449</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-panel" id="drinks">
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                            <div class="menu-item-info">
+                                <h4>San Miguel Pale Pilsen</h4>
+                                <p>Ice-cold local beer, the perfect companion for any meal</p>
+                            </div>
+                            <span class="menu-price">₱75</span>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-info">
+                                <h4>Boss Margarita</h4>
+                                <p>Our signature tequila cocktail with lime and orange liqueur</p>
+                            </div>
+                            <span class="menu-price">₱180</span>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-info">
+                                <h4>Red Horse Beer</h4>
+                                <p>Strong beer for those who like it bold and intense</p>
+                            </div>
+                            <span class="menu-price">₱85</span>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-info">
+                                <h4>Rum Coke</h4>
+                                <p>Classic dark rum with cola and a twist of lime</p>
+                            </div>
+                            <span class="menu-price">₱120</span>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-info">
+                                <h4>Mango Smoothie</h4>
+                                <p>Fresh ripe mango blended to creamy perfection</p>
+                            </div>
+                            <span class="menu-price">₱110</span>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-info">
+                                <h4>Long Island Iced Tea</h4>
+                                <p>A potent mix of vodka, rum, tequila, gin, and triple sec</p>
+                            </div>
+                            <span class="menu-price">₱220</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-panel" id="specials">
+                    <div class="menu-grid">
+                        <div class="menu-item featured">
+                            <div class="menu-item-info">
+                                <h4>Boss Platter <span class="badge">Chef's Pick</span></h4>
+                                <p>A massive spread of sisig, crispy pata, BBQ, and rice good for 4-6 people</p>
+                            </div>
+                            <span class="menu-price">₱1,299</span>
+                        </div>
+                        <div class="menu-item featured">
+                            <div class="menu-item-info">
+                                <h4>Unli Wings Night <span class="badge">Tue & Thu</span></h4>
+                                <p>Unlimited chicken wings in 5 flavors every Tuesday and Thursday</p>
+                            </div>
+                            <span class="menu-price">₱349</span>
+                        </div>
+                        <div class="menu-item featured">
+                            <div class="menu-item-info">
+                                <h4>Beer Bucket Deal <span class="badge">Best Value</span></h4>
+                                <p>6 bottles of San Miguel Pale Pilsen with free pulutan platter</p>
+                            </div>
+                            <span class="menu-price">₱499</span>
+                        </div>
+                        <div class="menu-item featured">
+                            <div class="menu-item-info">
+                                <h4>Karaoke Night Package <span class="badge">Weekends</span></h4>
+                                <p>Private karaoke room for 3 hours with food and drinks included</p>
+                            </div>
+                            <span class="menu-price">₱1,499</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">The Experience</span>
+                <h2 class="section-title">Gallery</h2>
+                <p class="section-desc">Moments from Boss Kups Garage</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item large">
+                    <img src="images/banner.png" alt="Boss Kups Food Spread">
+                    <div class="gallery-overlay">
+                        <span>Our Signature Spread</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder" style="background: linear-gradient(135deg, #2d2d2d, #1a1a1a);">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#e85d04" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+                        <span>Live Music Nights</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder" style="background: linear-gradient(135deg, #1a1a1a, #2d2d2d);">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#e85d04" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+                        <span>Cold Drinks Bar</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder" style="background: linear-gradient(135deg, #2d2d2d, #1a1a1a);">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#e85d04" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+                        <span>Karaoke Sessions</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder" style="background: linear-gradient(135deg, #1a1a1a, #2d2d2d);">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#e85d04" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+                        <span>Group Celebrations</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Get In Touch</span>
+                <h2 class="section-title">Visit Us</h2>
+                <p class="section-desc">Come hungry, leave happy</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        </div>
+                        <h4>Location</h4>
+                        <p>123 Main Street, Downtown<br>Your City, Philippines</p>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                        </div>
+                        <h4>Opening Hours</h4>
+                        <p>Mon–Thu: 4:00 PM – 12:00 AM<br>Fri–Sun: 4:00 PM – 2:00 AM</p>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                        </div>
+                        <h4>Contact</h4>
+                        <p>(+63) 912 345 6789<br>bosskups@email.com</p>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" id="contactForm">
+                        <h3>Send us a message</h3>
+                        <div class="form-group">
+                            <input type="text" id="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="phone" placeholder="Phone Number">
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" rows="4" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="images/logo.jpg" alt="Boss Kups" class="footer-logo">
+                    <p>Eat • Drink • Relax</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#menu">Menu</a>
+                    <a href="#gallery">Gallery</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-social">
+                    <a href="#" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                    </a>
+                    <a href="#" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Boss Kups Garage. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <span class="toast-icon">✓</span>
+        <span class="toast-message" id="toastMessage">Message sent successfully!</span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
